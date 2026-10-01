@@ -109,10 +109,15 @@ Track progress by updating the checkboxes below as steps are finished.
 - [x] Playwright: sign up → log in → write a post (full flow)
 - [x] Add `npm test` scripts and explain what to say in interviews
 
+
+### this is a new chage done
+
 ### Phase 9: CI/CD pipelines, the way a real company team works
 Goal: learn CI/CD from 0 to 100 on this project, and learn the daily team workflow used in corporate offices (branches, PRs, reviews, approvals, environments, releases). Teach each item as "this is how teams do it at work", and point out what the user will see on a normal workday.
 
 Note: a real team has several people. The user works alone, so some steps are **simulated**: the user plays both "developer" and "team lead", and a second GitHub account (or a friend) can act as the reviewer. GitHub doesn't let you approve your own PR.
+
+Note: this is a company MacBook. The terminal's GitHub login is the company account, so `git push` / `git pull` from the terminal fail with "Repository not found". **Always push, pull and fetch with GitHub Desktop** (logged in with the personal account). Committing from the terminal is fine. Keep `CLAUDE.md` bookkeeping out of the lessons (the user found it distracting).
 
 **A. Concepts**
 - [x] Lesson: what CI/CD is (CI vs CD, pipeline)
@@ -124,24 +129,24 @@ Note: a real team has several people. The user works alone, so some steps are **
 - [x] Create a GitHub repo and push the project (`github.com/afaqahmad0118/mini-blog`, personal account via GitHub Desktop; repo-local git identity, company identity stays global)
 - [x] Daily commands: `status`, `add`, `commit`, `push`, `pull`, `log`, `diff` (skipped: user already uses these daily at work)
 - [ ] Revisit: `git commit --amend` and `git reset --soft` (the user found these confusing; re-teach slowly with a fresh small example)
-- [ ] Commit messages the team way (Conventional Commits: `feat:`, `fix:`, `chore:`, `test:`), with a ticket id, like `feat(posts): add search [BLOG-12]`
+- [x] Commit messages the team way (Conventional Commits: `feat:`, `fix:`, `chore:`, `test:`), with a ticket id, like `feat(posts): add search [BLOG-12]`
 
 **C. Branching strategy (Git Flow, as used in offices)**
-- [ ] Long-lived branches: `main` = production, `staging` = testing / QA, `dev` = shared developer branch
-- [ ] Short-lived branches with naming rules: `feature/BLOG-12-post-search`, `bugfix/...`, `hotfix/...`
+- [x] Long-lived branches: `main` = production, `staging` = testing / QA, `dev` = shared developer branch
+- [x] Short-lived branches with naming rules: `feature/BLOG-12-post-search`, `bugfix/...`, `hotfix/...`
 - [ ] Never push directly to `main` / `staging` / `dev`; always go through a PR
 - [ ] Keeping a branch up to date: `git pull`, `merge` vs `rebase`
 - [ ] Merge conflicts: why they happen and how to fix them
 
 **D. Pull requests and code review (daily routine)**
-- [ ] Open a PR: title, description, linked ticket, screenshots
+- [x] Open a PR: title, description, linked ticket, screenshots
 - [ ] PR template (`.github/pull_request_template.md`): what changed, how tested, checklist
 - [ ] Code review: reviewers comment, request changes, approve; the developer fixes and pushes again
-- [ ] Merge types: merge commit vs squash vs rebase (most teams squash into `dev`)
-- [ ] Delete the branch after merge
+- [x] Merge types: merge commit vs squash vs rebase (most teams squash into `dev`)
+- [x] Delete the branch after merge
 
 **E. CI with GitHub Actions**
-- [ ] First workflow: lint + Jest on every push and PR
+- [x] First workflow: lint + Jest on every push and PR
 - [ ] Backend CI: a first `pytest` test, run in GitHub Actions
 - [ ] Playwright in CI (Postgres service container, start backend + frontend in the pipeline)
 - [ ] Reading a failed pipeline: logs, re-run jobs, fix and push
