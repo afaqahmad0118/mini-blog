@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, staging, main]
+  pull_request:
+    branches: [dev, staging, main]
+
+jobs:
+  frontend:
+    name: Frontend (lint + Jest)
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend/blogs-frontend
+
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/blogs-frontend/package-lock.json
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Jest tests
+        run: npm test
