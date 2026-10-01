@@ -121,8 +121,9 @@ Note: a real team has several people. The user works alone, so some steps are **
 
 **B. Git, the daily basics**
 - [x] `git init`, `.gitignore` (never commit `.env`, `node_modules`, `myenv`), first commit
-- [ ] Create a GitHub repo and push the project
-- [ ] Daily commands: `status`, `add`, `commit`, `push`, `pull`, `log`, `diff`
+- [x] Create a GitHub repo and push the project (`github.com/afaqahmad0118/mini-blog`, personal account via GitHub Desktop; repo-local git identity, company identity stays global)
+- [x] Daily commands: `status`, `add`, `commit`, `push`, `pull`, `log`, `diff` (skipped: user already uses these daily at work)
+- [ ] Revisit: `git commit --amend` and `git reset --soft` (the user found these confusing; re-teach slowly with a fresh small example)
 - [ ] Commit messages the team way (Conventional Commits: `feat:`, `fix:`, `chore:`, `test:`), with a ticket id, like `feat(posts): add search [BLOG-12]`
 
 **C. Branching strategy (Git Flow, as used in offices)**
