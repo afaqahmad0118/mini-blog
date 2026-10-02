@@ -7,6 +7,7 @@ import { logout } from "@/lib/auth";
 import { useCurrentUser } from "@/lib/useCurrentUser";
 
 // this is just for testing purpose
+/// this is again the ew chage I have dne
 
 export default function AuthNav() {
   const router = useRouter();
