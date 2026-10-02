@@ -6,6 +6,8 @@ import Avatar from "@/components/Avatar";
 import { logout } from "@/lib/auth";
 import { useCurrentUser } from "@/lib/useCurrentUser";
 
+// this is just for testing purpose
+
 export default function AuthNav() {
   const router = useRouter();
   const { user, loading } = useCurrentUser();
